@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    font-family: Arial;
+    padding: 20px;
+    background: #eee;
+}
+
+.demo {
+    border: 2px solid #333;
+    padding: 20px;
+    margin-bottom: 40px;
+    background: white;
+}
+
+.box {
+    height: 150px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    @media (min-width: 600px) {
+        #minWidthBox {
+            background-color: #4caf50;
+            color: white;
+        }
+    }
+
+    @media (min-height: 600px) {
+        #minHeightBox {
+            background-color: #2196f3;
+            color: white;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #minWidthBox {
+            background-color: #9c27b0;
+            color: white;
+        }
+    }
+
+    @media (max-height: 500px) {
+        #maxHeightBox {
+            background-color: #ff9800;
+            color: white;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        #themeBox {
+            background-color: #212121;
+            color: white;
+        }
+    }
+
+    @media (max-width: 500px) {
+        #maxWidthBox {
+            background-color: #f44336;
+            color: white;
+        }
+    }
+
+    @media (orientation: landscape) {
+    #landscapeBox {
+        background: #ff6d00;
+        color: white;
+    }
+}
+
+@media (orientation: portrait) {
+    #portraitBox {
+        background: #0091ea;
+        color: white;
+    }
+}
+</style>
+<body>
+    <h1>Media Query Demonstrations</h1>
+
+<h2>1. min-width: 600px</h2>
+<div class="demo">
+    <div class="box" id="minWidthBox"></div>
+</div>
+
+<h2>2. min-height: 600px</h2>
+<div class="demo">
+    <div class="box" id="minHeightBox"></div>
+</div>
+
+<h2>3. max-width: 500px</h2>
+<div class="demo">
+    <div class="box" id="maxWidthBox"></div>
+</div>
+
+<h2>4. max-height: 500px</h2>
+<div class="demo">
+    <div class="box" id="maxHeightBox"></div>
+</div>
+
+<h2>5. orientation: landscape</h2>
+<div class="demo">
+    <div class="box" id="landscapeBox">Landscape → ORANGE</div>
+</div>
+
+<h2>6. orientation: portrait</h2>
+<div class="demo">
+    <div class="box" id="portraitBox">Portrait → BLUE</div>
+</div>
+
+<h2>7. prefers-color-scheme</h2>
+<div class="demo">
+    <div class="box" id="themeBox"></div>
+</div>
+</body>
+</html>

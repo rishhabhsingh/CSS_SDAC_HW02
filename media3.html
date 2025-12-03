@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Text & Two-Column Layout</title>
+
+<style>
+/* -------------------------
+   PART 1 — Responsive Text
+-------------------------- */
+
+.responsive-text {
+    font-size: 16px;
+    padding: 20px;
+    background: #f4f4f4;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+
+@media (min-width: 769px) {
+    .responsive-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-text {
+        font-size: 12px;
+    }
+}
+
+/* ------------------------------
+   PART 2 — Two-Column Layout
+------------------------------ */
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.col1 { background: #3498db; }
+.col2 { background: #e67e22; }
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="responsive-text">
+    This text adjusts size based on the screen width.
+</div>
+
+<div class="container">
+    <div class="column col1">Column 1 Content</div>
+    <div class="column col2">Column 2 Content</div>
+</div>
+
+</body>
+</html>

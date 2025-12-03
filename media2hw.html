@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Responsive HW</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Horizontal navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        /* Horizontal 3-column content */
+        .container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .box {
+            size: 100px 100px;
+            flex: 1;
+            background: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 700px) {
+            /* Navbar becomes vertical */
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* Content columns become vertical */
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Register</a>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <img class ="img" src="https://imgs.search.brave.com/HV5yJzqXBD4361x0qxcEXvTOJj_cyKUnCwIuYkXr-p4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzU4LzIwLzY1/LzM2MF9GXzM1ODIw/NjU3OV9ZSkFEb2hu/OEZCUWl6ckRsb0pL/RTRkdDR6YkwwTUpw/ay5qcGc" alt="">
+        </div>
+        <div class="box">
+            <img class ="img" src="https://imgs.search.brave.com/oDKgPAfMvQYPQKes0mDv_9bdVEHmBdIfZelqlyxfAnQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/MTk5OTM4Ny9waG90/by9teXN0aWMtbW9y/bmluZy5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9VndfSkxq/MXFnbWhfdkRvaWVF/ejZPSHAwSVVNOFl5/OTZkV3JpdzRwbTFK/ND0" alt="">
+        </div>
+        <div class="box">
+            <img class ="img" src="https://imgs.search.brave.com/7-wTde78QUFaryBmzgxm-nqc09GQRkAXd2tHTOfypF0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/aW1hZ2VzaGluZS5p/bi91cGxvYWRzL2dh/bGxlcnkvTmF0dXJl/LVBob3RvLmpwZw" alt="">
+        </div>
+    </div>
+</body>
+</html>

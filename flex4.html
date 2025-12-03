@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox 19 Properties Demo</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #eee;
+    }
+
+    .demo {
+        border: 2px solid #333;
+        padding: 20px;
+        margin-bottom: 40px;
+        background: white;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .box-container {
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: hidden; 
+    }
+
+    .box {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .red { background: #ff4d4d; }
+    .green { background: #28c76f; }
+    .blue { background: #0090ff; }
+
+    /* Flex Direction */
+    .row { 
+        flex-direction: row; 
+    }
+    .column { 
+        flex-direction: column;
+     }
+    .row-reverse { 
+        flex-direction: row-reverse; 
+    }
+    .column-reverse { 
+        flex-direction: column-reverse; 
+    }
+
+    /* Justify Content */
+    .jc-start { 
+        justify-content: flex-start; 
+    }
+    .jc-end {
+        justify-content: flex-end; 
+    }
+    .jc-center { 
+        justify-content: center; 
+    }
+    .jc-around { 
+        justify-content: space-around; 
+    }
+    .jc-between { 
+        justify-content: space-between; 
+    }
+    .jc-evenly { 
+        justify-content: space-evenly; 
+    }
+
+    /* Align Items */
+    .ai-start { 
+        align-items: flex-start;
+        height: 150px; 
+    }
+    .ai-end { 
+        align-items: flex-end;
+        height: 150px; 
+    }
+    .ai-center { 
+        align-items: center; 
+        height: 150px;
+    }
+    .ai-stretch { 
+        align-items: stretch; 
+        height: 150px;
+    }
+
+    /* FLEX WRAP */
+    .wrap { 
+        flex-wrap: wrap; 
+    }
+    .nowrap { 
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+    }
+    .wrap-reverse { 
+        flex-wrap: wrap-reverse; 
+    }
+
+    /* ORDER DEMO */
+    .order-demo .red { 
+        order: 3; 
+    }
+    .order-demo .green { 
+        order: 1; 
+    }
+    .order-demo .blue { 
+        order: 2; 
+    }
+
+    /* GROW DEMO */
+    .grow-demo .green { 
+        flex-grow: 1; 
+    }
+
+</style>
+</head>
+<body>
+
+<h1>Flexbox 19 Properties Demonstration</h1>
+
+<!-- 1–4 FLEX DIRECTION -->
+<h2>1. flex-direction: row</h2>
+<div class="demo">
+    <div class="box-container row">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>2. flex-direction: column</h2>
+<div class="demo">
+    <div class="box-container column">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>3. flex-direction: row-reverse</h2>
+<div class="demo">
+    <div class="box-container row-reverse">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>4. flex-direction: column-reverse</h2>
+<div class="demo">
+    <div class="box-container column-reverse">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<!-- 5–10 JUSTIFY CONTENT -->
+<h2>5. justify-content: flex-start</h2>
+<div class="demo">
+    <div class="box-container jc-start">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>6. justify-content: flex-end</h2>
+<div class="demo">
+    <div class="box-container jc-end">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>7. justify-content: center</h2>
+<div class="demo">
+    <div class="box-container jc-center">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>8. justify-content: space-around</h2>
+<div class="demo">
+    <div class="box-container jc-around">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>9. justify-content: space-between</h2>
+<div class="demo">
+    <div class="box-container jc-between">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>10. justify-content: space-evenly</h2>
+<div class="demo">
+    <div class="box-container jc-evenly">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<!-- 11–14 ALIGN ITEMS -->
+<h2>11. align-items: flex-start</h2>
+<div class="demo">
+    <div class="box-container ai-start">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>12. align-items: flex-end</h2>
+<div class="demo">
+    <div class="box-container ai-end">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>13. align-items: center</h2>
+<div class="demo">
+    <div class="box-container ai-center">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>14. align-items: stretch</h2>
+<div class="demo">
+    <div class="box-container ai-stretch">
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+</div>
+
+<!-- 15–17 FLEX WRAP WITH 20 BOXES -->
+<h2>15. flex-wrap: wrap (20 boxes)</h2>
+<div class="demo">
+    <div class="box-container wrap">
+        <!-- 20 boxes -->
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+        <div class="box red">4</div>
+        <div class="box green">5</div>
+        <div class="box blue">6</div>
+        <div class="box red">7</div>
+        <div class="box green">8</div>
+        <div class="box blue">9</div>
+        <div class="box red">10</div>
+        <div class="box green">11</div>
+        <div class="box blue">12</div>
+        <div class="box red">13</div>
+        <div class="box green">14</div>
+        <div class="box blue">15</div>
+        <div class="box red">16</div>
+        <div class="box green">17</div>
+        <div class="box blue">18</div>
+        <div class="box red">19</div>
+        <div class="box green">20</div>
+    </div>
+</div>
+
+<h2>16. flex-wrap: nowrap (20 boxes)</h2>
+<div class="demo">
+    <div class="box-container nowrap">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+        <div class="box red">4</div>
+        <div class="box green">5</div>
+        <div class="box blue">6</div>
+        <div class="box red">7</div>
+        <div class="box green">8</div>
+        <div class="box blue">9</div>
+        <div class="box red">10</div>
+        <div class="box green">11</div>
+        <div class="box blue">12</div>
+        <div class="box red">13</div>
+        <div class="box green">14</div>
+        <div class="box blue">15</div>
+        <div class="box red">16</div>
+        <div class="box green">17</div>
+        <div class="box blue">18</div>
+        <div class="box red">19</div>
+        <div class="box green">20</div>
+    </div>
+</div>
+
+<h2>17. flex-wrap: wrap-reverse (20 boxes)</h2>
+<div class="demo">
+    <div class="box-container wrap-reverse">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+        <div class="box red">4</div>
+        <div class="box green">5</div>
+        <div class="box blue">6</div>
+        <div class="box red">7</div>
+        <div class="box green">8</div>
+        <div class="box blue">9</div>
+        <div class="box red">10</div>
+        <div class="box green">11</div>
+        <div class="box blue">12</div>
+        <div class="box red">13</div>
+        <div class="box green">14</div>
+        <div class="box blue">15</div>
+        <div class="box red">16</div>
+        <div class="box green">17</div>
+        <div class="box blue">18</div>
+        <div class="box red">19</div>
+        <div class="box green">20</div>
+    </div>
+</div>
+
+<!-- 18 ORDER -->
+<h2>18. order</h2>
+<div class="demo">
+    <div class="box-container order-demo">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<!-- 19 GROW -->
+<h2>19. flex-grow</h2>
+<div class="demo">
+    <div class="box-container grow-demo">
+        <div class="box red">1</div>
+        <div class="box green">2</div>
+        <div class="box blue">3</div>
+    </div>
+</div>
+
+<h2>20. flex-shrink</h2>
+<div class="demo">
+    <div class="box-container shrink-demo">
+        <div class="box red" style="display: flex; flex-shrink: 1;">1</div>
+        <div class="box green" style="display: flex; flex-shrink: 3;">2</div>
+        <div class="box blue" style="display: flex; flex-shrink: 0;">3</div>
+    </div>
+</div>
+
+</body>
+</html>
